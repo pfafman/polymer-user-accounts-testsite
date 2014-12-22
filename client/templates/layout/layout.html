@@ -1,0 +1,34 @@
+<template name="layout">
+  
+    {{#if currentUser}}  
+      
+      <core-drawer-panel forceNarrow>
+
+        {{> yield region='navbar'}}
+
+        <core-header-panel main>
+          <core-toolbar>
+            <paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
+            <span flex>Paper Accounts</span>
+            {{> atNavButton}}
+          </core-toolbar>
+          
+          <div class="main">
+            
+            {{> yield}}
+
+            {{> yield region='footer'}}
+
+          </div>
+        </core-header-panel>
+
+      </core-drawer-panel>
+    
+    {{else}}
+    
+      {{> fullPageAtForm}}
+    
+    {{/if}}
+  
+</template>
+
