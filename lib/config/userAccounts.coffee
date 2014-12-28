@@ -18,7 +18,7 @@ AccountsTemplates.addFields [
     type: "text"
     displayName: "username"
     required: true
-    minLength: 5
+    minLength: 3
   ,
     _id: 'email'
     type: 'email'
@@ -36,8 +36,8 @@ AccountsTemplates.configure
   confirmPassword: false
   enablePasswordChange: true
   forbidClientAccountCreation: false
-  overrideLoginErrors: true
-  sendVerificationEmail: false
+  overrideLoginErrors: false
+  sendVerificationEmail: true
 
   # Appearance
   showAddRemoveServices: false
@@ -68,12 +68,12 @@ AccountsTemplates.configure
   # Texts
   texts:
     button:
-      signUp: "Register Now!"
+      signUp: "Sign Up"
     socialSignUp: "Register"
     socialIcons:
       "meteor-developer": "fa fa-rocket"
     title:
-      forgotPwd: "Recover Your Passwod"
+      forgotPwd: "Recover Your Password"
 
 
 

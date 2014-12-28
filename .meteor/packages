@@ -8,6 +8,5 @@ iron:router
 coffeescript
 less
 accounts-password
-pfafman:user-acounts-polymer
-
 meteorhacks:inject-initial
+pfafman:user-accounts-polymer
