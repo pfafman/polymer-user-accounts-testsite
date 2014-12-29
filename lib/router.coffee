@@ -2,6 +2,8 @@
 Router.configure
   layoutTemplate: 'layout'
   notFoundTemplate: 'notFound'
+  loadingTemplate: 'loading'
+
   yieldTemplates:
     navbar:
       to: 'navbar'
@@ -9,8 +11,14 @@ Router.configure
       to: 'footer'
 
 
-Router.map ->
+Router.route '/',
+  onBeforeAction: ->
+    Router.go('/buttonTest')
 
-  @route 'home',
-    path: '/'
+
+Router.route '/buttonTest'
+
+
+Router.route '/formTest'
+
 

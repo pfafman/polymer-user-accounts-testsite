@@ -6,10 +6,14 @@
       <span>Menu</span>
     </core-toolbar>
     
-    <core-menu>
-      <core-item label="Home"></core-item>
-      <core-item label="Away"></core-item>
-      <paper-item>{{> atNavButton}}</paper-item>
+    <core-menu valueattr="id" selected="{{selectedPath}}-link">
+      
+      <core-item id="buttonTest-link" icon="settings" label="Button Test" class="link"></core-item>
+      
+      <core-item id="formTest-link" icon="input" label="Form Test" class="link"></core-item>
+
+      {{> atNavItem}}
+
     </core-menu>
 
   </core-header-panel>

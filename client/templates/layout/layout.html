@@ -1,30 +1,38 @@
 <template name="layout">
-  
-    {{#if currentUser}}  
-      
-      <core-drawer-panel forceNarrow>
+    {{#if loading}} 
 
-        {{> yield region='navbar'}}
+      <paper-spinner class="center" active></paper-spinner>
 
-        <core-header-panel main>
-          <core-toolbar>
-            <paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
-            <span flex>Paper Accounts</span>
-            {{> atNavButton}}
-          </core-toolbar>
-          
-          <div class="main">
-            {{> yield}}
-            {{> yield region='footer'}}
-          </div>
-        </core-header-panel>
-
-      </core-drawer-panel>
-    
     {{else}}
-    
-      {{> fullPageAtForm}}
-    
+
+
+      {{#if currentUser}}  
+        
+        <core-drawer-panel id="drawer-panel">
+
+          {{> yield region='navbar'}}
+
+          <core-header-panel main>
+            <core-toolbar>
+              <paper-icon-button core-drawer-toggle icon="menu"></paper-icon-button>
+              <span flex>Polymer Test</span>
+              {{!-- {{> atNavButton}} --}}
+            </core-toolbar>
+            
+            <div class="main">
+              {{> yield}}
+              {{> yield region='footer'}}
+            </div>
+          </core-header-panel>
+
+        </core-drawer-panel>
+      
+      {{else}}
+      
+        {{> fullPageAtForm}}
+      
+      {{/if}}
+
     {{/if}}
   
 </template>

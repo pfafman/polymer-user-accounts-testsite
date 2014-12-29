@@ -1,0 +1,38 @@
+<template name="formTest">
+  <div class="container">
+    <h3>Form Test</h3>
+    
+    <di-form data-action="test" id="test-form" class="{{disabled}}" >
+      <div layout vertical style="height:500px">
+        <div auto-vertical>
+          <paper-input-decorator 
+            floatingLabel
+            label="Some Text"
+            class="{{#if hasError}}invalid{{/if}}"
+            isInvalid={{hasError}}
+            error="{{errorText}}">
+            <input type="text" id="text" />
+          </paper-input-decorator>
+        </div>
+
+        <div auto-vertical>
+          <paper-checkbox label="Check"></paper-checkbox>
+        </div>
+
+        <div auto-vertical>
+          <paper-radio-group id="size-radio" selected="">
+            <paper-radio-button name="small" label="Small"></paper-radio-button>
+            <paper-radio-button name="medium" label="Medium"></paper-radio-button>
+            <paper-radio-button name="large" label="Large"></paper-radio-button>
+          </paper-radio-group>
+        </div>
+
+        <div auto-vertical>
+          <di-button type="submit" id="submit" class="submit {{submitDisabled}}" raised>
+            Submit
+          </di-button>
+        </div>
+      </div>
+    </di-form>
+  </div>
+</template>
