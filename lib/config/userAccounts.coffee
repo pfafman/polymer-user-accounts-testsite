@@ -75,6 +75,8 @@ AccountsTemplates.configure
     title:
       forgotPwd: "Recover Your Password"
 
+  #extraClass:
+  #  atInput: 'input-light'
 
 
 
